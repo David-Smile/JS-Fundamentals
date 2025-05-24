@@ -2,6 +2,7 @@ const args = process.argv.slice(2);
 
 if (!args[0] === 0) {
   console.log("No argument");
+  console.log('No argument provided');
 }
 else if (args[0] && !args[1] === 1) {   
   console.log("Argument found");
