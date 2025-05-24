@@ -1,20 +1,17 @@
-const { argv } = require('node:process');
+#!/usr/bin/env node
 
-// Get user-passed arguments (starting from index 2)
-const userArgs = argv.slice(2);
+const args = process.argv.length - 2;
 
-// Print message based on the number of arguments
-if (userArgs.length === 0) {
+if (args === 0) {
   console.log("No argument");
-} else if (userArgs.length === 1) {
+} else if (args === 1) {
   console.log("Argument found");
 } else {
   console.log("Arguments found");
 }
-
-// Print arguments from index 3 to 0 (in reverse, if they exist)
-for (let i = 3; i >= 0; i--) {
-  if (argv[i] !== undefined) {
-    console.log(`${i}: ${argv[i]}`);
-  }
-}
+// Output:
+// No argument
+// Argument found
+// Arguments found
+// Explanation:
+// This code checks the number of command-line arguments passed to the script. 
